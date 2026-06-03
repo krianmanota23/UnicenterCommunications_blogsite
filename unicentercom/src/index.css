@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import "./styles/animations.css";
+
+:root {
+  --header-height: 4.5rem;
+  --partners-height: 2rem;
+}
+
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: var(--header-height);
+}
+
+/* Scroll-linked galleries need full vertical travel; avoid y-snapping over them. */
+[data-scroll-gallery],
+[data-scroll-gallery-section] {
+  scroll-snap-align: none;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: clip;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+}
