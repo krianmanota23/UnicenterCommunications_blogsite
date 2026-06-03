@@ -1,11 +1,12 @@
 import ScrollReveal from "../components/ui/ScrollReveal";
 import { handleSectionLinkClick } from "../utils/smoothScrollTo";
 import { motion, useScroll, useTransform } from "motion/react";
+import { assetUrl } from "../utils/assetUrl";
 
 const heroBgStyle = `
-  #hero-bg { background-image: url('/Unicenter_DavaoMainOfficecp.png'); }
+  #hero-bg { background-image: url('${assetUrl('/Unicenter_DavaoMainOfficecp.png')}'); }
   @media (min-width: 640px) {
-    #hero-bg { background-image: url('/Unicenter_DavaoMainOffice.png'); }
+    #hero-bg { background-image: url('${assetUrl('/Unicenter_DavaoMainOffice.png')}'); }
   }
 `;
 
@@ -117,7 +118,7 @@ export default function Hero() {
 
               {/* Single Floating Logo */}
               <div className="relative z-10 animate-orb flex items-center justify-center">
-                <img src="/logo.png" alt="Unicenter logo" className="h-44 w-44 md:h-56 md:w-56 object-contain drop-shadow-[0_5px_20px_rgba(25,74,214,0.4)]" />
+                <img src={assetUrl('/logo.png')} alt="Unicenter logo" className="h-44 w-44 md:h-56 md:w-56 object-contain drop-shadow-[0_5px_20px_rgba(25,74,214,0.4)]" />
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import { services, contactInfo } from "../../data/siteContent";
 import { handleSectionLinkClick } from "../../utils/smoothScrollTo";
 import { toast } from "sonner";
+import { assetUrl } from "../../utils/assetUrl";
 
 const socialIcons = {
   facebook: (
@@ -51,7 +52,7 @@ export default function Footer() {
                   onClick={(event) => handleSectionLinkClick(event, "hero")}
                   className="inline-flex items-center space-x-3 self-start transition-opacity hover:opacity-90"
                 >
-                  <img src="/logo.png" alt="Unicenter logo" className="h-8 w-8 object-contain" />
+                  <img src={assetUrl('/logo.png')} alt="Unicenter logo" className="h-8 w-8 object-contain" />
                   <span className="text-xl font-bold tracking-tight text-white">
                     Unicenter <span className="text-[#f59e0b]">Communications</span>
                   </span>

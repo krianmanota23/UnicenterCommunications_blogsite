@@ -3,6 +3,7 @@ import { handleSectionLinkClick } from "../utils/smoothScrollTo";
 import ScrollReveal from "../components/ui/ScrollReveal";
 import { galleryScrollHints } from "../notifications";
 import ScrollHorizontalGallery from "../components/ui/ScrollHorizontalGallery";
+import { assetUrl } from "../utils/assetUrl";
 
 function ServiceCard({ service, className = "", compact = false }) {
   return (
@@ -15,7 +16,7 @@ function ServiceCard({ service, className = "", compact = false }) {
         className={`relative w-full shrink-0 overflow-hidden ${compact ? "h-40" : "h-60"}`}
       >
         <img
-          src={service.image}
+          src={assetUrl(service.image)}
           alt={service.title}
           className={`h-full w-full object-cover transition-transform duration-500 ${
             compact ? "hover:scale-105" : "group-hover:scale-105"

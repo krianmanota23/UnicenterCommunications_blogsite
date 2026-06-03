@@ -2,6 +2,7 @@ import { projectItems } from "../data/siteContent";
 import ScrollReveal from "../components/ui/ScrollReveal";
 import { galleryScrollHints } from "../notifications";
 import ScrollHorizontalGallery from "../components/ui/ScrollHorizontalGallery";
+import { assetUrl } from "../utils/assetUrl";
 
 function ProjectCard({ project, className = "", compact = false }) {
   return (
@@ -15,7 +16,7 @@ function ProjectCard({ project, className = "", compact = false }) {
       >
         {project.image ? (
           <img
-            src={project.image}
+            src={assetUrl(project.image)}
             alt={project.title}
             className={`h-full w-full object-cover transition-transform duration-500 ${
               compact ? "hover:scale-105" : "group-hover:scale-105"

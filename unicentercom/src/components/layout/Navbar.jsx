@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { smoothScrollToSection } from "../../utils/smoothScrollTo";
+import { assetUrl } from "../../utils/assetUrl";
 
 const NAV_LINKS = [
   { id: "hero", label: "Home" },
@@ -143,7 +144,7 @@ export default function Navbar() {
           onClick={(event) => handleNavClick(event, "hero")}
           className="flex items-center gap-2.5 shrink-0 min-w-0 max-w-[calc(100%-4rem)]"
         >
-          <img src="/logo.png" alt="Unicenter logo" className="h-8 w-8 object-contain shrink-0" />
+          <img src={assetUrl('/logo.png')} alt="Unicenter logo" className="h-8 w-8 object-contain shrink-0" />
           <span className="text-base sm:text-xl font-bold tracking-tight text-slate-950 leading-tight">
             Unicenter{" "}
             <span className="text-[#f59e0b]">Communications</span>
