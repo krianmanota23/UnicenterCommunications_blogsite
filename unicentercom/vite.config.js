@@ -9,5 +9,5 @@ export default defineConfig(({ command }) => ({
   ],
   // Only apply base path for production build (GitHub Pages)
   // Dev server stays at / so local images work normally
-  base: command === 'build' ? '/UnicenterCommunications_blogsite/' : '/',
+  base: '/UnicenterCommunications_blogsite/'
 }))
